@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<script type="text/html" id="template">
+			<div>
+				<img src='media/<%=abc.word()%>.jpg' 
+					class='h100pct centerh centerv' onclick='abc.showNextWord();'>
+				<div id='alphabet' class="alphabet" onclick='abc.sayAlphabet()'><%=abc.alphabet();%></div>
+				<div id='word' class="word"
+					onclick='abc.sayWord()'
+					><%=abc.word()%></div>
+
+				<div class='prev centerv' onclick='abc.showPrevWord()'>&lt;</div>
+				<div class='next centerv' onclick='abc.showNextWord()'>&gt;</div>
+			</div>
+		</script>
+
+		<script type="text/javascript" src="abc.js"></script>
+		<link rel="stylesheet" type="text/css" href="abc.css">
+	</head>
+
+	<body onload="">
+		<div>
+			<audio id='sound'></audio>
+		</div>
+
+		<div id='display'>
+
+			<div onclick='init();' style='background-color: white; height: 100%; width: 100%;'>
+				<img src='media/zebra.jpg' 
+					class='h100pct centerh centerv'>
+
+				<div class='word'>
+					<span style='color: red'>A</span><span style='color: yellow'>B</span><span style='color: green;'>C</span> Animals
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+		<!-- 
+		<input type='button' onclick='abc.prevAlphabet(); console.log(abc.alphabet() + abc.word());' value='Prev Alphabet' />
+		<input type='button' onclick='abc.prevWord(); console.log(abc.alphabet() + abc.word());' value='Prev Word'>
+		<input type='button' onclick='abc.nextAlphabet(); console.log(abc.alphabet() + abc.word());' value='Next Alphabet' />
+		<input type='button' onclick='abc.nextWord(); console.log(abc.alphabet() + abc.word());' value='Next Word'>
+		<input type='button' onclick='console.log(abc.alphabet());' value='Current Alphabet' />
+		<input type='button' onclick='console.log(abc.word());' value='current word'>
+		<input type='button' onclick='abc.sayWord()' value='say word'>
+		<input type='button' onclick='abc.sayAlphabet()' value='say alphabet'>
+
+		<input type='button' onclick='document.getElementById("display").innerHTML = abc.render();' value='show template'> -->
